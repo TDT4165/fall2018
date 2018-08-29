@@ -7,6 +7,7 @@ module Lib
     , iterate
     , filterPos
     , filterPosMany
+    , flip3
     , Maybe(..)
     , safeHeadList
     , safeHead

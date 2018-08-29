@@ -83,3 +83,7 @@ main = hspec $ do
     describe "filterPosMany" $ do
         it "filters all lists in a list" $ do
             filterPosMany manyCheck `shouldBe` [[], [], [347, 0, 0, 2, 0, 1]]
+
+    describe "flip3" $ do
+        it "reverses the three arguments" $ do
+            flip3 (\x y z -> [x,y,z]) 'c' 'b' 'a' `shouldBe` "abc"

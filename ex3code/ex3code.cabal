@@ -1,0 +1,37 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 929ac751e4258ef1b422a8c30c41a48a8f2df887c8549f57ddebb9f1248c920e
+
+name:           ex3code
+version:        0.1.0.0
+build-type:     Simple
+cabal-version:  >= 1.10
+
+library
+  exposed-modules:
+      Lib
+      Tree
+  other-modules:
+      Paths_ex3code
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite ex3code-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_ex3code
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck >=2.11.3 && <3
+    , base >=4.7 && <5
+    , ex3code
+    , hspec >=2.5.4 && <3
+  default-language: Haskell2010

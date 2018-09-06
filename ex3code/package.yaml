@@ -1,0 +1,21 @@
+name:                ex3code
+version:             0.1.0.0
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  ex3code-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ex3code
+    - hspec >= 2.5.4 && < 3
+    - QuickCheck >= 2.11.3 && < 3

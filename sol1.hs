@@ -75,25 +75,19 @@ ending (x:xs)
 -- returns the first n elements of 
 -- the list
 takeInt :: Int -> [Int] -> [Int]
-takeInt n lst
-    | n < 0    = []
-    | otherwise = takes n lst
-
-takes 0 _      = []
-takes _ []     = []
-takes _ [x]    = [x]
-takes n (x:xs) = x : takes (n-1) xs
+takeInt _ [] = []
+takeInt n (x:xs)
+    | n <= 0    = []
+    | otherwise = x : takeInt (n-1) xs
 
 -- implement "fizzbuzz" as described in exercise 1
 fizzbuzz :: [String]
-fizzbuzz = fizz [1..100]
-            where
-           fizz [] = []
-           fizz (x:xs)
-                | x `mod` 15 == 0 = "FizzBuzz" : fizz xs
-                | x `mod` 3 == 0  = "Fizz" : fizz xs
-                | x `mod` 5 == 0  = "Buzz" : fizz xs
-                | otherwise       = show x : fizz xs
+fizzbuzz = map fizz [1..100]
+  where fizz n
+          | n `mod` 15 == 0 = "FizzBuzz"
+          | n `mod` 3 == 0  = "Fizz"
+          | n `mod` 5 == 0  = "Buzz"
+          | otherwise       = show n
 
 printFizz :: IO ()
 printFizz = mapM_ putStrLn fizzbuzz

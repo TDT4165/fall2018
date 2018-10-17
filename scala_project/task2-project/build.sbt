@@ -1,5 +1,7 @@
-libraryDependencies += "org.scalatest" %% "scalatest" % "1.9.1" % "test"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
 
-libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.4-SNAPSHOT"
+resolvers += "Central" at "http://central.maven.org/maven2/"
 
-resolvers += "Akka Snapshot Repository" at "http://repo.akka.io/snapshots/"
+libraryDependencies ++= Seq(
+    "com.typesafe.akka" % "akka-actor_2.12" % "2.4.20"
+)

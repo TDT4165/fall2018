@@ -22,14 +22,6 @@ object Hello extends App {
 		sum
 	}
 
-	def updateLast(lsto: List[String], y: String): List[String] = lsto match {
-		case Nil => List(y)
-		case x :: xs => x::updateLast(xs,y)
-
-	}
-	val first = List("A","B","C","D")
-	println(updateLast(first,"Lul"))
-
 	// 1e
 	def sum_recursive(input: Array[Int]): Int = {
 		if (input.isEmpty) {

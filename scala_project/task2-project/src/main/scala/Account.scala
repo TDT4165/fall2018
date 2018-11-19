@@ -32,9 +32,9 @@ class Account(val accountId: String, val bankId: String, val initialBalance: Dou
         ???
     }
 
-    def withdraw(amount: Double): Unit = ??? // Like in part 2
-    def deposit(amount: Double): Unit = ??? // Like in part 2
-    def getBalanceAmount: Double = ??? // Like in part 2
+    def withdraw(amount: Double): Unit = ??? // Like in part 1
+    def deposit(amount: Double): Unit = ??? // Like in part 1
+    def getBalanceAmount: Double = ??? // Like in part 1
 
     def sendTransactionToBank(t: Transaction): Unit = {
         // Should send a message containing t to the bank of this account

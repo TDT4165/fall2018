@@ -1,0 +1,2 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTest14:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Valid transactions between two banks using full account address, account balances should be correct. Also, sending a BalanceRequest to an account should yield the correct balance.[0m[0m

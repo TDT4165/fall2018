@@ -1,0 +1,32 @@
+name:                ex5codeSol
+version:             0.1.0.0
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  ex5codeSol-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ex5codeSol
+
+tests:
+  ex5codeSol-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ex5codeSol
+    - hspec >= 2.5.4 && < 3
+    - QuickCheck >= 2.11.3 && < 3

@@ -1,0 +1,2 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mTest16:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Transaction to a non-existing bank should fail, and account balance should not be affected and transaction list should hold correct status information.[0m[0m
